@@ -1,0 +1,315 @@
+﻿:root {
+    --primary-color: lawngreen;
+}
+
+body{
+    margin: 0;
+    padding: 75px;
+    background-color: black;
+    color: var(--primary-color);
+    font-family: mainFont;
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    height: 85vh;
+}
+
+.text {
+    width: 100%;
+    height: 850px;
+    line-height: 25px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.mainImage {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+}
+
+
+#content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.line {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.large-text {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+.small-text {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+
+.darkheart {
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+.menu button {
+    all: unset;
+    display: inline-block;
+    color: var(--primary-color);
+    margin: 10px 0;
+    text-align: left;
+    padding: 10px;
+    border: 3px solid var(--primary-color);
+}
+
+
+.menu button:hover {
+    background-color: #005500;
+}
+
+
+#userInput, #userInput2 {
+    all: unset;
+    display: inline-block;
+    font-size: 10px;
+    color: var(--primary-color);
+    margin: 10px 0;
+    text-align: left;
+    padding: 10px;
+    border: 3px solid var(--primary-color);
+}
+
+.menu button.selected {
+    background-color: darkgreen;
+}
+
+
+.options{
+    all:unset;
+    align-items: initial;
+}
+
+label {
+    display: inline-block;
+    margin: 15px;
+}
+
+#changeColourButton, #colourInput {
+    all: unset;
+    font-size: 10px;
+    display: inline-block;
+    color: var(--primary-color);
+    margin: 10px 0;
+    text-align: left;
+    padding: 10px;
+    border: 3px solid var(--primary-color);
+}
+
+
+.outputs-container, .outputs-container2 {
+    display: flex;
+    width: 100%; /* Adjust as needed */
+    height: 70vh; /* Lock the height */
+    border: 3px solid var(--primary-color);
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    padding: 10px; /* Add some padding for better spacing */
+    flex-direction: column-reverse;
+}
+
+.outputs, .outputs2 {
+    display: flex;
+    flex-direction: column; /* Stack outputs vertically */
+    gap: 5px; /* Add space between outputs */
+    border: 1px solid var(--primary-color);
+}
+
+.outputs p, .outputs2 p {
+    margin: 0; /* Remove default margins for <p> elements */
+    padding: 15px; /* Add padding inside each output */
+    line-height: 1.4;
+}
+
+
+
+
+/* Fullscreen Modal Overlay */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000; /* Higher than any other element */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #000; /* Black background */
+    border: 3px solid var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    font-family: 'mainFont', sans-serif;
+    color: var(--primary-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Modal Buttons */
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-buttons button {
+    background-color: black;
+    padding: 10px 20px;
+    border: 3px solid var(--primary-color);
+    font-size: 16px;
+    font-family: 'mainFont', sans-serif;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-buttons button:hover {
+    background-color: #0c0;
+}
+
+
+
+
+.stats-display {
+    position: absolute; /* Position it over the outputs-container */
+    top: 30px; /* Align to top */
+    left: 75px; /* Align to left */
+    padding: 10px 10px; /* Give it some spacing */
+    background-color: black; /* Background color */
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color); /* Green bold border */
+}
+
+
+
+
+
+
+
+/* FOR MAP SCREEN*/
+
+#fullMapThing {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* Left (Buttons) | Right (Main Content) */
+    grid-template-rows: auto 1fr auto; /* Level | Map | Key | Page Buttons */
+    color: var(--primary-color);
+    font-family: mainFont;
+    gap: 10px;
+    height: 100%;
+}
+
+/* Floor Buttons (B) - Stretching Vertically */
+#floorButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid var(--primary-color);
+    height: 82vh; /* Extends nearly full height */
+    grid-row: 1 / 4;
+}
+
+#floorButtons button {
+    all: unset;
+    display: inline-block;
+    color: var(--primary-color);
+    margin: 10px 0;
+    text-align: left;
+    padding: 10px;
+    border: 3px solid var(--primary-color);
+}
+
+#floorButtons button:hover {
+    background-color: #005500;
+}
+
+/* Level (L) - Small, at the top */
+#level {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid var(--primary-color);
+    text-align: center;
+    height: 25px;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+/* Map (M) - Larger */
+#map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--primary-color);
+    height: 50vh; /* More space */
+    grid-row: 2;
+    grid-column: 2;
+}
+
+/* Key (K) - Stretches Horizontally */
+#key {
+    border: 3px solid var(--primary-color);
+    padding: 10px;
+    height: 20vh;
+    grid-row: 3;
+    grid-column: 2;
+}
+
+#pageButtons {
+    all: unset;
+    display: flex; /* Make buttons appear side by side */
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Align them properly */
+    gap: 16px; /* Add spacing between buttons */
+
+    color: var(--primary-color);
+    margin: 10px 0;
+    padding: 10px 0;
+    height: 20px;
+    background-color: black;
+    font-family: mainFont;
+    display: flex;
+    text-align: center;
+    white-space: nowrap;
+    justify-content: left;
+}
+
+
+
+
+
+@font-face {
+    font-family: mainFont;
+    src: url(./fonts/PressStart2P-Regular.ttf)
+}
